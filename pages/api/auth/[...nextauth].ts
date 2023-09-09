@@ -1,5 +1,5 @@
 import dbObj from "@/libs/mongo";
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
 import { Collection, Db, ObjectId } from 'mongodb';
