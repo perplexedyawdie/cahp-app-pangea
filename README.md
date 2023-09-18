@@ -2,7 +2,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+In your .env.local file, add the following data:
+```
+#
+# PUBLIC ENVIRONMENT VARIABLES, EXPOSED TO THE BROWSER
+#
+NEXT_PUBLIC_PANGEA_DOMAIN=
+NEXT_PUBLIC_AUTHN_CLIENT_TOKEN=
+NEXT_PUBLIC_AUTHN_HOSTED_LOGIN_URL=
+
+#
+# PRIVATE ENVIRONMENT VARIABLES, NOT EXPOSED TO THE BROWSER
+# ONLY AVAILABLE ON THE SERVER
+#
+AUTHN_SERVICE_TOKEN=
+```
+After starting the streamlit app, int he StreamlitIframe.tsx file, set the url to the streamlit app URL.
+
+Then run the development server:
 
 ```bash
 npm run dev
@@ -21,6 +38,10 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Pangea Usage
+
+Pangea AuthN service was used to setup user auth in the Next.js app.
 
 ## Learn More
 
